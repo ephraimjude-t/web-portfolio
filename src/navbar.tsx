@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-s
+
 const Navbar = () => {
   const [loaded, setloaded] = useState(false);
 
@@ -80,6 +80,8 @@ const Navbar = () => {
             md:w-[15vw]
             /* Large Screen (lg) */
             lg:w-[12vw]
+            /* Extra Large Screen (xl) */
+            lg:w-[10vw]
           `}
         >
           About me

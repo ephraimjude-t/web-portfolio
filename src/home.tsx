@@ -61,9 +61,9 @@ const Home = () => {
             /* Small Screen (sm) */
             w-[25%] max-w-xs mt-[5vh] sm:drop-shadow-lg
             /* Medium Screen (md) */
-            md:max-w-sm md:mt-[-20vh] hover:opacity-100 bg-opacity-50
+            md:max-w-sm md:mt-[10vh] hover:opacity-100 bg-opacity-50
             /* Large Screen (lg) */
-            lg:max-w-md lg:mt-[10vh]
+            lg:max-w-md lg:mt-[10vh] lg:w-[15%]
           `}
         >
           Contact Me
