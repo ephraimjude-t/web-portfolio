@@ -69,8 +69,6 @@ const Home = () => {
           Contact Me
         </button>
       </div>
-
-      <Navbar />
     </div>
   );
 };
