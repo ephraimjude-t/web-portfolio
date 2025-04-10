@@ -1,18 +1,76 @@
 import Navbar from "./navbar.tsx";
-//Hero section
+import { useEffect, useState } from "react";
+import "./gradientanimation.css";
+
+//home page
 const Home = () => {
+  const [loaded, setloaded] = useState(false);
+
+  useEffect(() => {
+    setloaded(true);
+  }, []);
+
   return (
-    <div className="bg-[#242038] h-screen w-full flex flex-col justify-center relative overflow-hidden z-[0]">
-      <p className="text-[#CAC4CE] text-center font-bold font-montserrat text-3xl z-[1]">
+    <div className=" bg-[#242038] bg-gradient-to-r from [#242038] to-[#665A9E] h-screen w-full flex flex-col items-center relative overflow-hidden z-[0]" style={{
+        animation: "gradient-bg 7s ease infinite",
+        backgroundSize: "200% 200%",
+      }}>
+      
+      {/* Title (Ephraim Jude) */}
+      <p
+        className={`
+          text-[#CAC4CE] text-center font-bold font-montserrat z-[1] transition-opacity duration-500 ease-in-out ${
+            loaded ? "opacity-100" : "opacity-0"
+          }
+          /* Small Screen (sm) */
+          text-3xl mt-[45vh]
+          /* Medium Screen (md) */
+          md:text-5xl md:mt-[40vh]
+          /* Large Screen (lg) */
+          lg:text-7xl lg:mt-[40vh] 
+        `}
+      >
         Ephraim Jude
       </p>
-      <p className="text-[#CAC4CE] text-center font-semibold font-montserrat text-md p-4 z-[1]">
+
+      {/* Subtitle (Full-Stack Developer...) */}
+      <p
+        className={`
+          text-[#CAC4CE] text-center font-semibold font-montserrat p-4 z-[1] transition-opacity duration-500 ease-in-out ${
+            loaded ? "opacity-100" : "opacity-0"
+          }
+          /* Small Screen (sm) */
+          text-md
+          /* Medium Screen (md) */
+          md:text-lg
+          /* Large Screen (lg) */
+          lg:text-2xl lg:mt-5
+        `}
+      >
         Full-Stack Developer | DevOps Enthusiast | Automating the Future
       </p>
-      <div className="absolute rounded-full bg-[#8D86C9] h-[40vh] w-[40vw]  blur-3xl opacity-50 z-[0] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-      <button className ="bg-[#9067C6] text-[#CAC4CE] rounded-[12px] absolute font-Regular font-[16px] font-sans w-[25vw] h-[5vh] z-[1] top-[65%] left-1/2 -translate-x-1/2 -translate-y-1/2 hover:scale-105 hover:bg-[#CAC4CE] hover:text-[#9067C6]  ">Contact Me</button>
-      <Navbar />
 
+      {/* Contact Me Button */}
+      <div className="relative w-full flex justify-center">
+        <button
+          className={`
+            bg-[rgba(144,103,198,0.5)] text-[#CAC4CE] rounded-[10px] font-Regular font-[16px] font-sans h-[5vh] z-[1] transition-transform duration-1000 ease-in-out ${
+              loaded ? "translate-y-0" : "translate-y-20"
+            }
+            hover:scale-105 hover:bg-[#CAC4CE] hover:text-[#9067C6]
+            /* Small Screen (sm) */
+            w-[25%] max-w-xs mt-[5vh] sm:drop-shadow-lg
+            /* Medium Screen (md) */
+            md:max-w-sm md:mt-[-20vh] hover:opacity-100 bg-opacity-50
+            /* Large Screen (lg) */
+            lg:max-w-md lg:mt-[10vh]
+          `}
+        >
+          Contact Me
+        </button>
+      </div>
+
+      <Navbar />
     </div>
   );
 };
