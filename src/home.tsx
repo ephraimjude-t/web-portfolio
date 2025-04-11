@@ -1,6 +1,6 @@
-import Navbar from "./navbar.tsx";
 import { useEffect, useState } from "react";
-import "./gradientanimation.css";
+import "./gradientanimation.css"
+import StarsBackground from './Components/StarBackground.tsx';
 
 //home page
 const Home = () => {
@@ -69,6 +69,11 @@ const Home = () => {
           Contact Me
         </button>
       </div>
+      {/* Stars Background */}
+      <div className="absolute top-0 left-0 w-full h-full z-[-1]">
+        <StarsBackground />
+      </div>
+      
     </div>
   );
 };
