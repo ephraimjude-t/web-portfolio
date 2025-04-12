@@ -8,7 +8,6 @@ const Skills = () => {
             backgroundSize: "200% 200%",
         }}>
             <StarBackground />
-            <SkillPlanet />
             
         </div>
     );
