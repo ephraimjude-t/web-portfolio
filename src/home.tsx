@@ -70,7 +70,7 @@ const Home = () => {
         </button>
       </div>
       {/* Stars Background */}
-      <div className="absolute top-0 left-0 w-full h-full z-[-1]">
+      <div className={`absolute top-0 left-0 w-full h-full z-[-1] transition-opacity duration-5000 ease-in-out ${loaded ? "opacity-100" : "opacity-0"}`}>
         <StarsBackground />
       </div>
       
