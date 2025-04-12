@@ -1,4 +1,3 @@
-import React from 'react';
 import { EffectComposer, Bloom } from '@react-three/postprocessing';
 import { Noise } from '@react-three/postprocessing';
 import { Vignette } from '@react-three/postprocessing';
