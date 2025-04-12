@@ -1,6 +1,7 @@
 import { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
+import GlowEffect from '../Components/StarsGlow.tsx';
 
 const Stars = () => {
   const groupRef = useRef<THREE.Group>(null);
@@ -46,6 +47,7 @@ const StarsBackground = () => {
       <Canvas camera={{ position: [0, 0, 20], fov: 75 }}>
         <ambientLight />
         <Stars />
+        <GlowEffect />
       </Canvas>
     </div>
   );
