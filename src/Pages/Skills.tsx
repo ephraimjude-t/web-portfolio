@@ -1,5 +1,4 @@
 import StarBackground from "../Components/StarBackground.tsx";
-import SkillPlanet from '../Components/Skillplanets.tsx';
 
 const Skills = () => {
     return (
